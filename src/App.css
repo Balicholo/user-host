@@ -58,6 +58,9 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media (max-width: 948px) {
+    height: 87vh;
+  }
 }
 
 .hero-content {
@@ -398,12 +401,15 @@ cursor: pointer;
   .logo-link {
     font-size: 10px;
   }
-
+  .password-input-container {
+    position: relative;
+    z-index: 5;
+  }
   .nav-links {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #f8f9fa;
+    background-color: rgb(255, 241, 222);
     flex-direction: column;
     width: 100%;
     height: calc(100vh - 60px);
@@ -411,7 +417,7 @@ cursor: pointer;
     transition: transform 0.3s ease-in-out;
     padding-top: 20px;
     display: none; /* Hide links initially */
-    z-index: 1;
+    z-index: 10;
   }
 
   .nav-links.open {
@@ -647,6 +653,7 @@ form{
 }
 .password-input-container {
   position: relative;
+  z-index: 5;
 }
 .password-toggle-icon {
   position: absolute;
@@ -725,4 +732,27 @@ form{
   color: orange;
   font-family: "Fira Sans", sans-serif;
   font-size: 30px;
+}
+.App{
+  overflow: hidden;
+}
+.nav-links{
+  z-index: 1;
+}
+.login-page{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section{
+  @media (max-width: 594px) {
+    height: 87vh;
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    height: 80vh;
+    width: 100%;
+  }
 }

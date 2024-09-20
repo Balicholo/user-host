@@ -29,7 +29,8 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="login-page">
+          <form onSubmit={handleSubmit}>
       <h3>Sign in to your account</h3>
 
       <div className="mb-3">
@@ -69,6 +70,8 @@ function Login() {
         Don`t have an account? <a href="/register">Create one now</a>
       </p>
     </form>
+  </div>
+
   );
 }
 
